@@ -20,6 +20,7 @@ The name **ELL** is inspired by the character Eleven ("El"), while intentionally
 
 The project explores the concept of strangers communicating without direct conversation. Each flower becomes a small visual memory, creating a digital space where creativity, curiosity, and personal expression quietly coexist.
 
+![Eleven](images/image 10.png)
 ---
 
 ## Technologies Used
@@ -53,7 +54,7 @@ Particular attention was given to creating a soft visual aesthetic through paste
 
 ### Figma Prototype
 
-*Figma wireframes, prototypes, and design iterations will be added here.*
+![Figma](images/figma preview.png)
 
 ---
 
