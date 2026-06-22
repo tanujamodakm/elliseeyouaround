@@ -36,4 +36,5 @@ The project explores the concept of strangers communicating without direct conve
 ## Author
 
 **Tanuja M. Modak**
+
 ELL, I See You Around was developed as a personal front-end project exploring interactive web design, creative storytelling, and user-generated digital experiences. The project combines inspiration from visual media with technical implementation to create a shared online space built around art, messages, and discovery.
