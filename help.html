@@ -1,42 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ellis Garden • Help</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Poppins:wght@300;400;500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-
-<body>
-    <i id="backBtn" class="fa-solid fa-arrow-left"></i>
-    <div class="help-wrapper">
-        <div class="help-box">
-            <h1>NOTICES & HELP</h1>
-            <p>Welcome to Ellis Garden.</p>
-            <p>This is a shared creative space where users can draw and leave messages in the garden.</p>
-            <p> If you face any issue while drawing, saving, or loading content, you can report it below. </p>
-            <div class="email">
-                <a href="mailto:elliseeyouaround@gmail.com"> elliseeyouaround@gmail.com </a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ellis Garden - Help</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    
+    <body>
+        <header>
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <h2>Help</h2>
+        </header>
+        <main class="help-page">
+            <h1>Notices & Help</h1>
+            <p> Welcome to Ellis Garden. </p>
+            <p> This is a shared creative space where users can draw and leave messages in the garden. </p>
+            <p> If you face any issue while drawing, saving, or loading content, you can report it below.</p>
+            
+            <a class="mail" href="mailto:elliseyouaround@gmail.com"> elliseyouaround@gmail.com </a>
+            <div class="help-card">
+                <h2>Include in your message</h2>
+                <ul>
+                    <li>Your email</li>
+                    <li>Subject of issue</li>
+                    <li>Detailed description</li>
+                    <li>Screenshots if possible</li>
+                </ul>
+                <p>Every message is read personally.</p>
             </div>
-            <h3>Include in your message</h3>
-            <ul>
-                <li>Your email</li>
-                <li>Subject of issue</li>
-                <li>Detailed description</li>
-                <li>Screenshots if possible</li>
-            </ul>
-            <p class="note"> Every message is read personally. </p>
-        </div>
-    </div>
-    <script>
-        document.getElementById("backBtn").addEventListener("click", () => {
-            window.location.href = "index.html";
-        });
-    </script>
-</body>
+        </main>
+        
+        <footer>
+            <a href="mailto:elliseyouaround@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            
+            <a href="https://github.com/tanujamodakm" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <a href="https://linkedin.com/in/tanuja-modak-4514b626b" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        
+        </footer>
 
+
+
+</body>
 </html>
