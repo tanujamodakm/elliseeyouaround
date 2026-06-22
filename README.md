@@ -22,8 +22,6 @@ ELL, I See You Around is an interactive web experience where users can create pi
 
 Before development began, the project was planned through interface sketches and design prototypes to establish the visual style, layout structure, and user interaction flow. Particular attention was given to creating a soft visual aesthetic through pastel colors, minimal interface elements, and an open digital landscape where flowers can be freely placed and discovered.
 
-#Figma Prototype
-
 ![Figma](images/figmapreview.png)
 
 ---
