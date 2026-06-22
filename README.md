@@ -1,4 +1,4 @@
-# elliseeyouaround Website
+# ELL, I See You Around
 
 **Live Website:** https://elliseeyouaround.netlify.app/
 
@@ -6,22 +6,23 @@
 
 ## Introduction
 
-Ellisee Garden is a front-end web project developed to provide a clean and user-friendly gardening assistance experience. The website focuses on simplicity, accessibility, and intuitive navigation while presenting gardening-related information through a visually appealing interface.
+ELL, I See You Around is an interactive web experience where users can create pixel-art flowers, attach short messages to them, and place them within a shared digital flower field. Over time, individual drawings and messages collectively form a living garden created by everyone who visits the website.
 
-Designed and developed using core web technologies, the project demonstrates the process of transforming an idea into a functional and publicly accessible web application. Particular attention was given to layout structure, responsive design, and user experience to ensure consistency across different screen sizes and devices.
+The project was designed and developed using HTML, CSS, and JavaScript, with a focus on creating a simple and visually calming experience. Rather than functioning as a traditional social platform, the website encourages quiet interaction through creativity, allowing visitors to leave a small piece of themselves behind for others to discover.
+
 ---
 
 ## Inspiration
 
-The inspiration behind Ellisee Garden came from an interest in creating a digital space that combines practical information with a calm and approachable design. Gardening is often associated with patience, growth, and simplicity, and these ideas influenced both the visual design and overall user experience of the website.
+The idea for *ELL, I See You Around* was inspired by a scene from *Stranger Things* featuring a vast field of flowers existing alongside an atmosphere of uncertainty and transformation. The contrast between beauty and mystery left a lasting impression and became the foundation for this project.
 
-The project was also created as an opportunity to strengthen front-end development skills through the complete development cycle, including planning, interface design, implementation, testing, and deployment.
+The name **ELL** is inspired by the character Eleven ("El"), while intentionally being adapted into its own identity. The phrase *"I See You Around"* reflects the idea that people may come and go, leave messages behind, and perhaps never meet, yet their presence remains visible through the flowers they create.
+
+The project explores the concept of strangers communicating without direct conversation. Each flower becomes a small visual memory, creating a digital space where creativity, curiosity, and personal expression quietly coexist.
 
 ---
 
 ## Technologies Used
-
-The project was built using the following technologies and tools:
 
 ### Front-End Development
 
@@ -39,24 +40,27 @@ The project was built using the following technologies and tools:
 ### Deployment
 
 * Netlify
-  The project is deployed and hosted on Netlify, making it publicly accessible through a dedicated web address.
-  The deployment process allows the website to be accessed from any modern browser without requiring installation or additional configuration.
+
+The website is publicly accessible through Netlify and can be viewed directly in a modern web browser without requiring installation or additional software.
 
 ---
 
 ## Design & Prototyping
 
-Before development began, the interface was planned and structured through the design process to establish a clear layout, visual hierarchy, and navigation flow. The goal was to create a user experience that is both visually pleasing and easy to use.
+Before development began, the project was planned through interface sketches and design prototypes to establish the visual style, layout structure, and user interaction flow.
 
-The design process included wireframing, layout planning, and interface prototyping before implementation.
+Particular attention was given to creating a soft visual aesthetic through pastel colors, minimal interface elements, and an open digital landscape where flowers can be freely placed and discovered.
 
 ### Figma Prototype
 
-*Figma prototype screenshots and design iterations will be added here.*
+*Figma wireframes, prototypes, and design iterations will be added here.*
 
+---
 
 ## Author
 
 **Tanuja M. Modak**
+
 B.Tech Data Science Student
-Ellisee Garden was developed as a personal project to explore front-end web development, interface design, and deployment workflows while building a practical and user-focused web application.
+
+ELL, I See You Around was developed as a personal front-end project exploring interactive web design, creative storytelling, and user-generated digital experiences. The project combines inspiration from visual media with technical implementation to create a shared online space built around art, messages, and discovery.
