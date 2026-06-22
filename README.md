@@ -1,9 +1,6 @@
 # ELL, I See You Around
 
 [![ELL, I See You Around](https://img.shields.io/badge/ELL%2C%20I%20See%20You%20Around-Live%20Website-ffb6c1?style=for-the-badge)](https://elliseeyouaround.netlify.app/) (Click on the badge to access the site)
-
-also link available (https://elliseeyouaround.netlify.app/)
-
 ---
 
 ## Introduction
