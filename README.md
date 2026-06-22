@@ -1,6 +1,6 @@
 # ELL, I See You Around
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-pink)](https://elliseeyouaround.netlify.app/)
+[![ELL, I See You Around](https://img.shields.io/badge/ELL%2C%20I%20See%20You%20Around-Live%20Website-ffb6c1?style=for-the-badge)](https://elliseeyouaround.netlify.app/)
 
 ---
 
