@@ -421,3 +421,65 @@ main>* {
         bottom: 75px;
     }
 }
+
+.help-page{
+    min-height:100vh;
+    padding-top:100px;
+    padding-left:40px;
+    padding-right:40px;
+    background:var(--pink-bg);
+    font-family:"Poppins",sans-serif;
+}
+
+.help-page h1{
+    font-family:"La Belle Aurore",cursive;
+    font-size:60px;
+    color:#555;
+}
+.help-page p{
+    font-size:18px;
+    margin:10px 0;
+}
+
+.mail{
+    display:inline-block;
+    margin:15px 0;
+    color:#ff8f9a;
+    font-weight:500;
+}
+
+.help-card{
+    margin-top:30px;
+    background:white;
+    width:500px;
+    max-width:90%;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
+}
+
+.help-card h2{
+    margin-bottom:15px;
+}
+
+.help-card ul{
+    padding-left:20px;
+}
+
+.help-card li{
+    margin:8px 0;
+}
+
+@media(max-width:700px){
+    .help-page{
+        padding:80px 20px;
+    }
+    
+    .help-page h1{
+        font-size:42px;
+    }
+    .help-card{
+        width:100%;
+    }
+}
