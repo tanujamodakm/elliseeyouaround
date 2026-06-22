@@ -10,19 +10,6 @@ ELL, I See You Around is an interactive web experience where users can create pi
 
 The project was designed and developed using HTML, CSS, and JavaScript, with a focus on creating a simple and visually calming experience. Rather than functioning as a traditional social platform, the website encourages quiet interaction through creativity, allowing visitors to leave a small piece of themselves behind for others to discover.
 
----
-
-## Inspiration
-
-The idea for *ELL, I See You Around* was inspired by a scene from *Stranger Things* featuring a vast field of flowers existing alongside an atmosphere of uncertainty and transformation. The contrast between beauty and mystery left a lasting impression and became the foundation for this project.
-
-The name **ELL** is inspired by the character Eleven ("El"), while intentionally being adapted into its own identity. The phrase *"I See You Around"* reflects the idea that people may come and go, leave messages behind, and perhaps never meet, yet their presence remains visible through the flowers they create.
-
-The project explores the concept of strangers communicating without direct conversation. Each flower becomes a small visual memory, creating a digital space where creativity, curiosity, and personal expression quietly coexist.
-
-![Eleven](images/elinspire.jpeg)
----
-
 ## Technologies Used
 
 ### Front-End Development
@@ -56,6 +43,19 @@ Particular attention was given to creating a soft visual aesthetic through paste
 
 ![Figma](images/figmapreview.png)
 
+---
+
+---
+
+## Inspiration
+
+The idea for *ELL, I See You Around* was inspired by a scene from *Stranger Things* featuring a vast field of flowers existing alongside an atmosphere of uncertainty and transformation. The contrast between beauty and mystery left a lasting impression and became the foundation for this project.
+
+The name **ELL** is inspired by the character Eleven ("El"), while intentionally being adapted into its own identity. The phrase *"I See You Around"* reflects the idea that people may come and go, leave messages behind, and perhaps never meet, yet their presence remains visible through the flowers they create.
+
+The project explores the concept of strangers communicating without direct conversation. Each flower becomes a small visual memory, creating a digital space where creativity, curiosity, and personal expression quietly coexist.
+
+![Eleven](images/elinspire.jpeg)
 ---
 
 ## Author
