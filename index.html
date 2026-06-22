@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,137 +8,97 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Poppins:wght@300;400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
+
     <header>
         <i id="homeBtn" class="fa-solid fa-house"></i>
         <div class="icons">
-            <i
-                class="fa-solid fa-rotate-right"
-                onclick="location.reload()">
-            </i>
+            <i class="fa-solid fa-rotate-right" onclick="location.reload()"></i>
         </div>
     </header>
-
     <div id="backgroundGarden">
         <div id="gardenSpace"></div>
     </div>
 
     <main>
-
-        <div
-            class="name-box"
-            id="nameBox">
-            <input
-                id="nameInput"
-                type="text"
-                placeholder="Enter Your Name"
-                autocomplete="off">
+        <div class="name-box">
+            <div class="name-input-wrapper">
+                <input id="nameInput" placeholder="Enter Your Name" autocomplete="off" autocorrect="off"
+                    autocapitalize="off" spellcheck="false">
+                <button id="enterBtn">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
         </div>
-
-        <div
-            class="welcome"
-            id="welcome">
-
+        <div class="welcome" id="welcome">
             <div id="helloText">
-                <h1> Hello! <span id="username"></span> </h1>
+                <h1> Hello!
+                    <span id="username"></span>
+                </h1>
                 <p> See you around </p>
             </div>
+
             <button id="drawBtn"> Start to Draw </button>
         </div>
 
-        <div
-            class="canvas-box"
-            id="canvasBox">
-
+        <div class="canvas-box" id="canvasBox">
             <h2>Canvas</h2>
-
             <div class="draw-area">
-
                 <div class="tools">
-                    <label for="colorPicker"> Color </label>
-                    <input
-                        type="color"
-                        id="colorPicker"
-                        value="#ff9fa5">
-                    <button
-                        id="eraserBtn"
-                        title="Eraser">
+                    <label> Color </label>
+                    <input type="color" id="colorPicker" value="#ff9fa5">
+                    <button id="eraserBtn" title="Eraser">
                         <i class="fa-solid fa-eraser"></i>
                     </button>
-
-                    <button
-                        id="fillBtn"
-                        title="Fill Tool">
+                    <button id="fillBtn" title="Fill">
                         <i class="fa-solid fa-fill-drip"></i>
                     </button>
-
-                    <button
-                        id="undoBtn"
-                        title="Undo">
+                    <button id="undoBtn" title="Undo">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
-
-                    <button
-                        id="redoBtn"
-                        title="Redo">
+                    <button id="redoBtn" title="Redo">
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
-
-                    <button
-                        id="clearCanvasBtn"
-                        title="Clear Canvas">
+                    <button id="clearCanvasBtn" title="Clear">
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </div>
-
-                <div
-                    class="grid"
-                    id="grid">
+                <div class="grid" id="grid">
                 </div>
             </div>
-            
             <div class="bottom">
-                <input
-                    id="message"
-                    type="text"
-                    placeholder="Write something with your drawing">
-
-                <button
-                    id="saveBtn"
-                    title="Save Drawing">
-
+                <input id="message" type="text" placeholder="Write something with your drawing" autocomplete="off"
+                    autocorrect="off" autocapitalize="off" spellcheck="false">
+                <button id="saveBtn" title="Save">
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </div>
         </div>
     </main>
-
     <div id="messageBar">
         <p id="messageText"></p>
     </div>
-
     <footer>
+        <a href="mailto:elliseeyouaround@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
 
-    <a href="mailto:elliseeyouaround@gmail.com" target="_blank">
-        <i class="fa-solid fa-envelope"></i>
-    </a>
+        <i class="fa-solid fa-circle-question" onclick="window.location.href='help.html'"> </i>
 
-    <i class="fa-solid fa-circle-question" onclick="window.location.href='help.html'"></i>
+        <a href="https://github.com/tanujamodakm" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
 
-    <a href="https://github.com/tanujamodakm"
-       target="_blank">
-        <i class="fa-brands fa-github"></i>
-    </a>
+        <a href="https://linkedin.com/in/tanuja-modak-4514b626b" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </footer>
 
-    <a href="https://linkedin.com/in/tanuja-modak-4514b626b"
-       target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-    </a>
+    <script type="module" src="script.js"></script>
 
-</footer>
-    <script src="script.js"></script>
 </body>
+
 </html>
