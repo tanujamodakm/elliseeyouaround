@@ -1,6 +1,7 @@
 # ELL, I See You Around
 
-[![ELL, I See You Around](https://img.shields.io/badge/ELL%2C%20I%20See%20You%20Around-Live%20Website-ffb6c1?style=for-the-badge)](https://elliseeyouaround.netlify.app/)
+[![ELL, I See You Around](https://img.shields.io/badge/ELL%2C%20I%20See%20You%20Around-Live%20Website-ffb6c1?style=for-the-badge)](https://elliseeyouaround.netlify.app/) (Click on the badge to access the site)
+also link available (https://elliseeyouaround.netlify.app/)
 
 ---
 
@@ -10,27 +11,13 @@ ELL, I See You Around is an interactive web experience where users can create pi
 
 The project was designed and developed using HTML, CSS, and JavaScript, with a focus on creating a simple and visually calming experience. Rather than functioning as a traditional social platform, the website encourages quiet interaction through creativity, allowing visitors to leave a small piece of themselves behind for others to discover.
 
-## Technologies Used
+## Tech Stack
 
-### Front-End Development
-
-* HTML5
-* CSS3
-* JavaScript
-
-### Design & Development Tools
-
-* Visual Studio Code
-* Figma
-* Google Fonts
-* Font Awesome
-
-### Deployment
-
-* Netlify
-
-The website is publicly accessible through Netlify and can be viewed directly in a modern web browser without requiring installation or additional software.
-
+| Category | Technologies |
+|----------|-------------|
+| Front-End | HTML5, CSS3, JavaScript, Firebase |
+| Tools | Visual Studio Code, Figma, Google Fonts, Font Awesome |
+| Deployment | Netlify |
 ---
 
 ## Design & Prototyping
@@ -61,7 +48,5 @@ The project explores the concept of strangers communicating without direct conve
 ## Author
 
 **Tanuja M. Modak**
-
-B.Tech Data Science Student
 
 ELL, I See You Around was developed as a personal front-end project exploring interactive web design, creative storytelling, and user-generated digital experiences. The project combines inspiration from visual media with technical implementation to create a shared online space built around art, messages, and discovery.
