@@ -9,11 +9,6 @@
 Ellisee Garden is a front-end web project developed to provide a clean and user-friendly gardening assistance experience. The website focuses on simplicity, accessibility, and intuitive navigation while presenting gardening-related information through a visually appealing interface.
 
 Designed and developed using core web technologies, the project demonstrates the process of transforming an idea into a functional and publicly accessible web application. Particular attention was given to layout structure, responsive design, and user experience to ensure consistency across different screen sizes and devices.
-
-The live version of the project can be accessed at:
-
-**https://elliseeyouaround.netlify.app/**
-
 ---
 
 ## Inspiration
@@ -45,10 +40,7 @@ The project was built using the following technologies and tools:
 
 * Netlify
   The project is deployed and hosted on Netlify, making it publicly accessible through a dedicated web address.
-
-**Live Website:** https://elliseeyouaround.netlify.app/
-
-The deployment process allows the website to be accessed from any modern browser without requiring installation or additional configuration.
+  The deployment process allows the website to be accessed from any modern browser without requiring installation or additional configuration.
 
 ---
 
@@ -66,7 +58,5 @@ The design process included wireframing, layout planning, and interface prototyp
 ## Author
 
 **Tanuja M. Modak**
-
 B.Tech Data Science Student
-
 Ellisee Garden was developed as a personal project to explore front-end web development, interface design, and deployment workflows while building a practical and user-focused web application.
