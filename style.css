@@ -423,43 +423,50 @@ main>* {
 }
 
 .help-page{
-    min-height:100vh;
-    padding-top:100px;
-    padding-left:40px;
-    padding-right:40px;
+    position:relative;
+    min-height:calc(100vh - 120px);
+    padding:120px 80px 100px;
     background:var(--pink-bg);
-    font-family:"Poppins",sans-serif;
+    display:block;
+    color:var(--text);
 }
 
 .help-page h1{
     font-family:"La Belle Aurore",cursive;
-    font-size:60px;
-    color:#555;
-}
-.help-page p{
-    font-size:18px;
-    margin:10px 0;
+    font-size:70px;
+    font-weight:normal;
+    margin-bottom:25px;
 }
 
-.mail{
+.help-page>p{
+    width:600px;
+    max-width:90%;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:8px;
+}
+
+.help-page .mail{
     display:inline-block;
     margin:15px 0;
     color:#ff8f9a;
-    font-weight:500;
+    font-size:18px;
 }
 
 .help-card{
-    margin-top:30px;
+    position:absolute;
+    right:80px;
+    top:200px;
+    width:300px;
     background:white;
-    width:500px;
-    max-width:90%;
-    padding:25px;
-    border-radius:20px;
+    padding:30px;
+    border-radius:25px;
     box-shadow:
-        0 10px 30px rgba(0,0,0,.08);
+    0 15px 35px rgba(0,0,0,.08);
 }
 
 .help-card h2{
+    font-size:22px;
     margin-bottom:15px;
 }
 
@@ -468,18 +475,32 @@ main>* {
 }
 
 .help-card li{
-    margin:8px 0;
+    margin:10px 0;
+}
+
+.help-card p{
+    margin-top:15px;
 }
 
 @media(max-width:700px){
     .help-page{
-        padding:80px 20px;
+        padding:90px 25px;
     }
     
     .help-page h1{
-        font-size:42px;
+        font-size:45px;
     }
+    
+    .help-page>p{
+        width:100%;
+        font-size:15px;
+    }
+    
     .help-card{
+        position:relative;
+        top:auto;
+        right:auto;
+        margin-top:30px;
         width:100%;
     }
 }
