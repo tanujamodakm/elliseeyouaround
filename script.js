@@ -46,6 +46,7 @@ const gardenSpace = document.getElementById("gardenSpace");
 const messageBar = document.getElementById("messageBar");
 const messageText = document.getElementById("messageText");
 const homeBtn = document.getElementById("homeBtn");
+const refreshBtn = document.getElementById("refreshBtn");
 
 let currentUser = "";
 let currentColor = "#ff9fa5";
@@ -57,6 +58,7 @@ let redoStack = [];
 let waitingForPlacement = false;
 let flowerToPlace = null;
 let flowerMessage = "";
+let viewMode = "all";
 
 function updateToolUI() {
     eraserBtn.classList.remove("active");
@@ -170,26 +172,28 @@ function paint(cell, index) {
 
     if (currentTool === "eraser") {
         drawData[index] = "";
-        cell.style.background = "white";
+        cell.style.backgroundColor = "transparent";
         return;
     }
 
     drawData[index] = currentColor;
-    cell.style.background =
+    cell.style.backgroundColor =
         currentColor;
 }
 
 function redrawGrid() {
-    const cells =
-        document.querySelectorAll(
-            ".cell"
-        );
 
-    cells.forEach(
-        (cell, index) => {
-            cell.style.background =
-                drawData[index] || "white";
-        });
+    const cells =
+        document.querySelectorAll(".cell");
+
+
+    cells.forEach((cell, index) => {
+
+        cell.style.backgroundColor =
+            drawData[index] || "transparent";
+
+    });
+
 }
 
 colorPicker.addEventListener(
@@ -257,11 +261,14 @@ clearCanvasBtn.addEventListener(
         redrawGrid();
     });
 
-homeBtn.addEventListener(
-    "click",
-    () => {
-        location.reload();
-    });
+
+function showMessage(text) {
+    messageText.innerHTML = text;
+    messageBar.classList.add("show");
+    setTimeout(() => {
+        messageBar.classList.remove("show");
+    }, 3000);
+}
 
 function saveDrawing() {
     const text =
@@ -287,6 +294,10 @@ function saveDrawing() {
         `${currentUser}|${text}`;
     waitingForPlacement = true;
     canvasBox.style.display = "none";
+
+    showMessage(
+        "Click anywhere on the screen to place your pixel-art"
+    );
 }
 
 saveBtn.addEventListener(
@@ -354,39 +365,79 @@ backgroundGarden.addEventListener(
         waitingForPlacement = false;
         flowerToPlace = null;
         flowerMessage = "";
-        showGarden();
+
+        await showGarden();
+
+        resetToStart();
     });
+
+function resetToStart() {
+    nameBox.style.display = "block";
+    welcome.style.display = "none";
+    canvasBox.style.display = "none";
+    nameInput.value = "";
+    username.textContent = "";
+    currentUser = "";
+    drawBtn.style.display = "none";
+    waitingForPlacement = false;
+    flowerToPlace = null;
+}
 
 async function showGarden() {
     document
         .querySelectorAll(".pixelFlower")
-        .forEach(
-            flower => flower.remove()
-        );
+        .forEach(flower => flower.remove());
 
     try {
+
         const snapshot =
-            await getDocs(
-                flowersCollection
+            await getDocs(flowersCollection);
+
+        let drawings = [];
+        snapshot.forEach(doc => {
+            drawings.push(doc.data());
+        });
+
+        drawings.sort(
+            (a, b) => a.created - b.created
+        );
+
+        drawings.forEach(data => {
+
+            createFlower(
+                data.drawing,
+                data.message,
+                data.x,
+                data.y
             );
-        snapshot.forEach(
-            (doc) => {
-                const data =
-                    doc.data();
-                createFlower(
-                    data.drawing,
-                    data.message,
-                    data.x,
-                    data.y
-                );
-            });
+
+        });
+
+        if (viewMode === "first") {
+
+            backgroundGarden.scrollLeft =
+                drawings[0]?.x || 0;
+
+            backgroundGarden.scrollTop =
+                drawings[0]?.y || 0;
+
+        }
+
+        if (viewMode === "latest") {
+            let last =
+                drawings[drawings.length - 1];
+
+            backgroundGarden.scrollLeft =
+                last?.x || 0;
+
+            backgroundGarden.scrollTop =
+                last?.y || 0;
+
+        }
     }
 
     catch (error) {
-        console.log(
-            "Loading error",
-            error
-        );
+        console.log(error);
     }
 }
 
@@ -407,6 +458,8 @@ function createFlower(
     flower.className =
         "pixelFlower";
 
+    flower.style.pointerEvents = "none";
+
     flower.style.left =
         x + "px";
 
@@ -419,48 +472,45 @@ function createFlower(
     flower.style.gridTemplateRows =
         "repeat(18,8px)";
 
-    drawing.forEach(
-        pixel => {
+    drawing.forEach(pixel => {
 
-            const square =
-                document.createElement("div");
+        const square = document.createElement("div");
 
-            square.style.background =
-                pixel || "transparent";
+        if (pixel) {
 
-            flower.appendChild(square);
-        });
+            square.style.backgroundColor = pixel;
+            square.style.pointerEvents = "auto";
+            square.onclick = (e) => {
+                e.stopPropagation();
+                let parts =
+                    (msg || "Unknown|No message")
+                        .split("|");
+                let author = parts[0];
 
-    flower.addEventListener(
-        "click",
-        (e) => {
-            e.stopPropagation();
+                let text =
+                    parts.slice(1)
+                        .join("|");
 
-            let parts =
-                (msg || "Unknown|No message")
-                    .split("|");
+                messageText.innerHTML = `
+            <span class="message-author">
+            ${author}
+            </span>
+            :
+            <span class="message-name">
+            ${text}
+            </span>
+            `;
+                
+                messageBar.classList.add("show");
+            };
+        }
+        else {
 
-            let author =
-                parts[0];
-
-            let text =
-                parts.slice(1)
-                    .join("|");
-
-            messageText.innerHTML = `
-<span class="message-author">
-${author}
-</span>
-:
-<span class="message-name">
-${text}
-</span>
-`;
-
-            messageBar.classList.add(
-                "show"
-            );
-        });
+            square.style.visibility = "hidden";
+            square.style.pointerEvents = "none";
+        }
+        flower.appendChild(square);
+    });
 
     gardenSpace.appendChild(
         flower
@@ -602,10 +652,11 @@ async function firebaseCheck() {
 }
 
 firebaseCheck();
-
 if (homeBtn) {
-    homeBtn.onclick = () => {
-        location.reload();
+    homeBtn.onclick = async () => {
+        viewMode = "first";
+        await showGarden();
+        resetToStart();
     };
 }
 
@@ -614,3 +665,19 @@ updateToolUI();
 console.log(
     "Pastel Garden Ready"
 );
+
+if (refreshBtn) {
+    refreshBtn.onclick = async () => {
+        viewMode = "latest";
+        await showGarden();
+        resetToStart();
+    };
+
+}
+window.addEventListener("load", () => {
+    viewMode = "all";
+    showGarden();
+    nameBox.style.display = "block";
+    welcome.style.display = "none";
+    canvasBox.style.display = "none";
+});
